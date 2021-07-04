@@ -1,4 +1,5 @@
 'use strict'
+import './js/storage.js';
 import './styles.css';
 import refs from './js/refs.js';
 import ApiService from './js/apiService.js';
@@ -6,6 +7,7 @@ import { updateMarkup, clearMarkup } from './js/updateMarkup.js';
 import { showMessage } from './js/notification.js';
 import onScroll from './js/scroll.js';
 import loadMoreBtn from './js/spiner.js';
+import openModal from './js/openModal.js';
 
 const loadMore = new loadMoreBtn({
     selector: '[data-action="load-more"]',
@@ -43,3 +45,5 @@ function onLoadMore() {
         loadMore.enable();
     });
 }
+
+openModal();
